@@ -1,19 +1,25 @@
 console.clear();
-let prevScrollPos = window.pageYOffset;
-const header = document.querySelector("header");
+const group = document.querySelector(".mq-group");
+console.log(group.offsetWidth);
 
-window.addEventListener("scroll", function () {
-  const currentScrollPos = window.pageYOffset;
+let lastScrollTop = 0;
+const header = document.querySelector('.main-header');
+const threshold = 100;           // 스크롤이 이 정도 이상 내려가야 반응
+const minScrollDelta = 5;       // 변화폭 민감도 ↑
 
-  if (prevScrollPos > currentScrollPos) {
-    // 스크롤 올릴 때 → 헤더 보이기
-    header.style.top = "0";
-  } else {
-    // 스크롤 내릴 때 → 헤더 숨기기
-    header.style.top = "-150px"; // 헤더 전체 높이에 맞게 조절 (배너 + main-box)
-  }
+window.addEventListener('scroll', function () {
+    const currentScroll = window.scrollY;
+    const delta = Math.abs(currentScroll - lastScrollTop);
 
-  prevScrollPos = currentScrollPos;
+    if (delta < minScrollDelta) return;
+
+    if (currentScroll > lastScrollTop && currentScroll > threshold) {
+    header.classList.add('hide-header');
+    } else if (currentScroll < lastScrollTop) {
+    header.classList.remove('hide-header');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 
