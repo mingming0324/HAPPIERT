@@ -40,14 +40,14 @@ $(window).on('scroll', function () {
     box.css({
       position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
       top: footerTop - boxHeight - 20 + 'px', // 푸터보다 살짝 위에
-      right: '4%',
+      right: '30px',
     });
   } else {
     // 아직 푸터 안 닿았으면 계속 따라다니기
     box.css({
       position: 'fixed',  // 화면에 고정
-      top: '70%',         // 아래쪽에 띄워놓기
-      right: '4%',
+      top: '81.4%',         // 아래쪽에 띄워놓기
+      right: '30px',
     });
   }
 });
