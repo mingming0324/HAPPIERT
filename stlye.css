@@ -864,7 +864,7 @@ body::-webkit-scrollbar-track {
   .swiper .swiper-wrapper .swiper-slide {}
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) {
   html {
     font-size: 10px;
   }
@@ -930,21 +930,76 @@ body::-webkit-scrollbar-track {
   }
 
   /* ✅ 메인 섹션 3: 이미지/텍스트 순차 정렬 */
+  .ms3{
+    position: relative;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0;
+  }
+
+  .ms3 .ms3-contbox {
+    gap: 5rem;
+  }
+
   .ms3 .ms3-contbox .contbox {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  .ms3 .ms3-contbox .contbox .imgbox .img:nth-child(2) {
+    display: none;
   }
 
   .ms3 .ms3-contbox .contbox .txtbox {
     width: 100%;
-    padding: 1.5rem;
-    align-items: center;
-    text-align: center;
+    padding: 0;
+    /* padding: 1.5rem; */
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+
+  .ms3 .ms3-contbox .contbox .txtbox .tit {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ms3 .ms3-contbox .contbox .txtbox .desc {
+    font-size: 1.4rem;
+    font-weight: normal;
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  .ms3 .ms3-contbox .contbox .txtbox .desc > .pc-br {
+    display: none;
+  }
+
+  .ms3 .ms3-contbox .contbox .txtbox .morebtn {
+    margin: 0 auto;
+  }
+
+  .ms3 .ms3-contbox .contbox .txtbox .morebtn {
+    font-size: 14px;
+    padding: 7.5px 15px;
   }
 
   .ms3 .ms3-contbox .contbox .imgbox {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+  }
+
+  .ms3 .ms3-contbox .contbox-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ms3 .ms3-contbox .contbox-right .imgbox {
+    order: 1;
+  }
+
+  .ms3 .ms3-contbox .contbox-right .txtbox-2 {
+    order: 2;
   }
 
   /* ✅ 메인 섹션 4 텍스트 축소 */
