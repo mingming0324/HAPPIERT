@@ -560,6 +560,10 @@ img {
   gap: 0 1.5rem;
 }
 
+.ms4 .ms4-top .mob_view {
+  display: none;
+}
+
 .ms4 .ms4-top .txtbox .txt {
   display: inline-block;
 }
@@ -871,7 +875,6 @@ body::-webkit-scrollbar-track {
 }
 
 @media (max-width: 768px) {
-
   .inner,
   .ms4 .ms4-contbox .txtbox,
   .sec-1 .txt-box,
@@ -930,7 +933,7 @@ body::-webkit-scrollbar-track {
   }
 
   /* ✅ 메인 섹션 3: 이미지/텍스트 순차 정렬 */
-  .ms3{
+  .ms3 {
     position: relative;
     width: 100%;
     padding-left: 25px;
@@ -1080,6 +1083,8 @@ body::-webkit-scrollbar-track {
       transform: rotate(360deg);
     }
   }
+
+  /* ✅ 메인 섹션 4 contbox 수정 */
 
   .ms4 .ms4-contbox .txtbox {
     padding: 1rem;
