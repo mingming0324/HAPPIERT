@@ -18,6 +18,7 @@ body {
 html {
   -webkit-text-size-adjust: none;
   font-size: 16PX;
+  font-size: 16px;
 }
 
 #all-wrap {
@@ -811,6 +812,13 @@ img {
   background-color: white;
 }
 
+@media (max-width: 768px) {
+  #footer .inner .f-contbox .item.guide .guidelist li a::after {
+    display: none;
+    content: none; /* 혹시 남아있을 경우 대비 */
+  }
+}
+
 #footer .inner .f-contbox .item .f-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -843,6 +851,10 @@ img {
   line-height: 1.5;
   letter-spacing: -0.04rem;
   margin-top: 2rem;
+}
+
+#footer .copyright.mob_view {
+  display: none;
 }
 
 /* 스크롤바 커스텀 시작 */
@@ -955,7 +967,7 @@ body::-webkit-scrollbar-track {
   /* ✅ 메인 섹션 3: 이미지/텍스트 순차 정렬 */
   .ms3 {
     position: relative;
-    width: 100%;
+    width: 95%;
     padding-left: 25px;
     padding-right: 25px;
     margin: 0;
@@ -976,7 +988,7 @@ body::-webkit-scrollbar-track {
   }
 
   .ms3 .ms3-contbox .contbox .txtbox {
-    width: 100%;
+    width: 95%;
     padding: 0;
     /* padding: 1.5rem; */
     /* align-items: center; */
@@ -991,9 +1003,10 @@ body::-webkit-scrollbar-track {
   .ms3 .ms3-contbox .contbox .txtbox .desc {
     font-size: 1.4rem;
     font-weight: normal;
-    max-width: 100%;
+    min-width: 100%;
     margin-bottom: 3rem;
   }
+
   .ms3 .ms3-contbox .contbox .txtbox .desc > .pc-br {
     display: none;
   }
@@ -1120,10 +1133,76 @@ body::-webkit-scrollbar-track {
   }
 
   /* ✅ 푸터 컬럼 → 세로 정렬 */
+  #footer .inner {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 3.5rem 6rem;
+  }
+
+  #footer .inner .f-logo {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  #footer .inner .f-logo .logo-box {
+    max-width: 9.25rem;
+  }
+
+  #footer .inner .f-logo .logo-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #footer .inner .f-contbox {
     flex-direction: column;
+    width: 100%;
+    /* gap: 2rem; */
+  }
+
+  #footer .inner .f-contbox .item {
+    position: relative;
+  }
+
+  .pc_view {
+    display: none;
+  }
+
+  #footer .inner .f-contbox .item.info .infobox {
+    margin-bottom: 0;
+  }
+
+  .mob_view {
+    display: block;
+  }
+
+  #footer .inner .f-contbox .item.info .infobox .infotxt {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  #footer .inner .f-contbox .item.guide {
+    width: 100%;
+    min-width: unset;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, .2)
+  }
+
+  #footer .inner .f-contbox .item.guide .guidelist {
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
   }
+
+ .copyright.mob_view {
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  margin-top: 2rem;
+ }
 
   #footer {
     height: auto;
