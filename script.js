@@ -54,12 +54,14 @@ $(window).on('scroll', function () {
 // 모바일 스와이퍼
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
-  centeredSlides: true,
-  spaceBetween: 30,
+  centeredSlides: false,
+  spaceBetween: 20,
   loop: false,
+  slidesOffsetBefore: 20, // 왼쪽 여백
+  slidesOffsetAfter: 20,  // 오른쪽 여백
   breakpoints: {
     0: {
-      slidesPerView: 1,   // 모바일
+      slidesPerView: 1.2,   // 모바일
     },
     768: {
       slidesPerView: 3,   // 데스크탑

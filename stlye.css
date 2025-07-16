@@ -17,6 +17,7 @@ body {
 
 html {
   -webkit-text-size-adjust: none;
+  font-size: 16PX;
 }
 
 #all-wrap {
@@ -868,7 +869,7 @@ body::-webkit-scrollbar-track {
 
 
 
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   html {
     font-size: 10px;
   }
@@ -937,6 +938,11 @@ body::-webkit-scrollbar-track {
   .sec-2__swiper {
     display: block;
   }
+
+  .sec-2__swiper .swiper-slide img {
+    width: 100%;
+  }
+
 
 
   /* ✅ 섹션 3: 마르퀴 폰트 크기 축소 */
