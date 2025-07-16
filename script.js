@@ -53,17 +53,18 @@ $(window).on('scroll', function () {
 
 // 모바일 스와이퍼
 var swiper = new Swiper('.mySwiper', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  loop: false,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,   // 모바일
+    },
+    768: {
+      slidesPerView: 3,   // 데스크탑
+    }
+  }
 });
 
 var appendNumber = 4;

@@ -268,6 +268,12 @@ li {
   position: relative;
   width: 100%;
 }
+.sec-2__swiper {
+  display: none;
+}
+.pc {
+  display: block;
+}
 
 .sec-2>.inner-con {
   width: 100%;
@@ -280,14 +286,13 @@ li {
 
 .sec-2 .img-box {
   display: flex;
-  width: 100%;
   margin-bottom: 1.25rem;
   overflow: hidden;
 }
 
 .sec-2 .img-box img {
   height: 100%;
-  width: 100%;
+  display: block;
 }
 
 .sec-2 .txt-box {
@@ -860,18 +865,24 @@ body::-webkit-scrollbar-track {
 }
 
 /* 스크롤바 커스텀 끝 */
-@media (min-width: 768px) {
-  .swiper .swiper-wrapper {
-    overflow: visible !important;
-  }
 
-  .swiper .swiper-wrapper .swiper-slide {}
-}
+
 
 @media (min-width: 320px) {
   html {
     font-size: 10px;
   }
+.main-box {
+  padding: 0;
+}
+
+.sec-3__marquee-wrapper {
+  padding: 80px  0 0 0;
+}
+.sec-2-swiper {
+  padding: 0 1.5rem;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -905,7 +916,7 @@ body::-webkit-scrollbar-track {
 
   .sec-1 .txt-box {
     top: calc(6rem + 2rem);
-    padding: 0 1.5rem;
+    padding: 8rem 1.5rem;
     gap: 1.5rem;
     align-items: center;
     text-align: center;
@@ -920,10 +931,13 @@ body::-webkit-scrollbar-track {
     font-size: 1rem;
   }
 
-  /* ✅ 섹션 2: 제품 카드 단일 열로 표시 */
-  .sec-2 .inner-con {
-    gap: 1.5rem;
+  .pc {
+    display: none;
   }
+  .sec-2__swiper {
+    display: block;
+  }
+
 
   /* ✅ 섹션 3: 마르퀴 폰트 크기 축소 */
   .sec-3__marquee-wrapper .item {
