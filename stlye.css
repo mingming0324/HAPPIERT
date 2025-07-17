@@ -36,7 +36,13 @@ a {
 * {
   box-sizing: border-box;
 }
+.mobile {
+  display: none;
+}
 
+.pc {
+  display: block;
+}
 /* 노말라이즈 끝 */
 
 /* 헤더 시작*/
@@ -58,12 +64,12 @@ a {
 /* 메인베너 시작 */
 .top-banner {
   width: 100%;
-  height: 45px;
+  height: 40px;
   background-color: rgb(190, 32, 31);
   color: #fff;
   text-align: center;
-  padding-top: 12.5px;
-  font-size: 14px;
+  padding-top: 10px;
+  font-size: 13px;
   display: block;
   font-weight: 400;
   position: fixed;
@@ -139,7 +145,7 @@ a {
   align-items: center;
 
   gap: 25px;
-  height: 100px;
+  height: 100%;
 }
 
 li {
@@ -217,8 +223,7 @@ li {
 /* 섹션 1 시작 */
 
 .sec-1 {
-  margin: 0;
-  margin-bottom: 100px;
+  padding-bottom: 40px; 
   height: 100vh;
   position: relative;
 }
@@ -262,20 +267,20 @@ li {
   margin: 0;
 }
 
+
 /* 섹션 1 끝 */
 
 /* 섹션 2 시작 */
 
 .sec-2 {
+  padding-top: 40PX;
   position: relative;
   width: 100%;
 }
 .sec-2__swiper {
   display: none;
 }
-.pc {
-  display: block;
-}
+
 
 .sec-2>.inner-con {
   width: 100%;
@@ -410,7 +415,6 @@ li {
   line-height: 150px;
   cursor: pointer;
   gap: 20px;
-  padding-bottom: 70px;
 }
 
 .sec-3>.item span {
@@ -880,46 +884,49 @@ body::-webkit-scrollbar-track {
 
 
 
+
 @media (max-width: 768px) {
+  /* 공통 */
   html {
-    font-size: 10px;
+    font-size: 14.4px;
+  } 
+  .pc {
+    display: none;
   }
+  .mobile {
+    display: block;
+  }
+
+
+/* 헤더 */
 .main-box {
-  padding: 0;
+  height: 60px;
 }
-
-.sec-3__marquee-wrapper {
-  padding: 80px  0 0 0;
-}
-.sec-2-swiper {
-  padding: 0 1.5rem;
-}
-
-}
-
-@media (max-width: 768px) {
   .main-nav,
   .main-mypage {
     display: none;
   }
 
-  /* ✅ 로고 중앙 정렬 유지 */
+  /*  로고 중앙 정렬 유지 */
   .main-logo>.logo-box>a>img {
-    width: 120px;
+    width: 80px;
     height: auto;
   }
 
-  /* ✅ 섹션 1 텍스트 */
+  /* 섹션 1 텍스트 */
+  .sec-1 {
+    padding-bottom: 0;
+  }
   .sec-1 .img-box img {
+    padding-top: 40px;
     width: 100%;
     max-width: unset;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
   }
 
   .sec-1 .txt-box {
     top: calc(6rem + 2rem);
-    padding: 8rem 1.5rem;
     gap: 1.5rem;
     align-items: center;
     text-align: center;
@@ -934,9 +941,7 @@ body::-webkit-scrollbar-track {
     font-size: 1rem;
   }
 
-  .pc {
-    display: none;
-  }
+
   .sec-2__swiper {
     display: block;
   }
@@ -947,14 +952,17 @@ body::-webkit-scrollbar-track {
 
 
 
-  /* ✅ 섹션 3: 마르퀴 폰트 크기 축소 */
-  .sec-3__marquee-wrapper .item {
-    font-size: 4rem;
-    line-height: 4rem;
+  /* 섹션 3: 마르퀴 폰트 크기 축소 */
+  .sec-3__marquee-wrapper {
+    padding-top: 80px;
+  }
+
+  .sec-3__marquee-wrapper > .marquee > .mq-group .item {
+    font-size: 7rem;
     gap: 1rem;
   }
 
-  /* ✅ 메인 섹션 3: 이미지/텍스트 순차 정렬 */
+  /* 메인 섹션 3: 이미지/텍스트 순차 정렬 */
   .ms3 {
     position: relative;
     width: 100%;
@@ -980,9 +988,6 @@ body::-webkit-scrollbar-track {
   .ms3 .ms3-contbox .contbox .txtbox {
     width: 95%;
     padding: 0;
-    /* padding: 1.5rem; */
-    /* align-items: center; */
-    /* text-align: center; */
   }
 
   .ms3 .ms3-contbox .contbox .txtbox .tit {
@@ -1029,7 +1034,7 @@ body::-webkit-scrollbar-track {
     order: 2;
   }
 
-  /* ✅ 메인 섹션 4 텍스트 축소 */
+  /* 메인 섹션 4 텍스트 축소 */
   .ms4 .inner {
     position: relative;
     width: 100%;
@@ -1151,7 +1156,7 @@ body::-webkit-scrollbar-track {
     margin-bottom: 3rem;
   }
 
-  /* ✅ 푸터 컬럼 → 세로 정렬 */
+  /* 푸터 컬럼 → 세로 정렬 */
   #footer .inner {
     max-width: 100%;
     width: 100%;
