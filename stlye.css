@@ -18,7 +18,6 @@ body {
 html {
   -webkit-text-size-adjust: none;
   font-size: 16PX;
-  font-size: 16px;
 }
 
 #all-wrap {
@@ -903,26 +902,44 @@ body::-webkit-scrollbar-track {
 /* 헤더 */
 .main-box {
   height: 60px;
+  justify-content: space-between;
+  padding: 0 15px;
 }
   .main-nav,
   .main-mypage {
     display: none;
   }
 
-  /*  로고 중앙 정렬 유지 */
+  .side-menu {
+    display: flex;
+  }
+
+  .side-menu img {
+    display: block;
+    width: 20px;
+  }
+  .side-menu > .side-btn {
+    width: 20px;
+  }
+
+  .side-menu > .side-icon {
+    display: flex;
+    gap: .7rem;
+  }
+
+  /*  로고  */
   .main-logo>.logo-box>a>img {
     width: 80px;
     height: auto;
   }
 
-  /* 섹션 1 텍스트 */
+  /* 섹션 1 */
   .sec-1 {
     padding-bottom: 0;
   }
   .sec-1 .img-box img {
     padding-top: 40px;
     width: 100%;
-    max-width: unset;
     height: 95%;
     object-fit: cover;
   }
@@ -936,14 +953,15 @@ body::-webkit-scrollbar-track {
   }
 
   .sec-1 .txt-box .tit {
-    font-size: 2rem;
+    font-size: 1.95rem;
   }
 
   .sec-1 .txt-box .desc {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 
-
+/* 스와이퍼 */
   .sec-2__swiper {
     display: block;
   }
@@ -954,7 +972,7 @@ body::-webkit-scrollbar-track {
 
 
 
-  /* 섹션 3: 마르퀴 폰트 크기 축소 */
+  /* 마르퀴 */
   .sec-3__marquee-wrapper {
     padding-top: 80px;
   }
@@ -964,14 +982,14 @@ body::-webkit-scrollbar-track {
     gap: 1rem;
   }
 
-  /* 메인 섹션 3: 이미지/텍스트 순차 정렬 */
+  /*섹션 3 */
   .ms3 {
     position: relative;
     width: 100%;
     padding-left: 25px;
     padding-right: 25px;
     margin: 0;
-    padding: 8rem  1.5rem 5.5rem 1.5rem ;
+    padding: 3rem  1.5rem 5.5rem 1.5rem ;
   }
 
   .ms3 .ms3-contbox {
@@ -1037,7 +1055,7 @@ body::-webkit-scrollbar-track {
     order: 2;
   }
 
-  /* 메인 섹션 4 텍스트 축소 */
+  /* 돌아가는 이미지지*/
   .ms4 .inner {
     position: relative;
     width: 100%;
@@ -1115,7 +1133,7 @@ body::-webkit-scrollbar-track {
     }
   }
 
-  /* ✅ 메인 섹션 4 contbox 수정 */
+  /* 섹션 4 */
 
   .ms4-contbox {
     display: block;
@@ -1164,7 +1182,7 @@ body::-webkit-scrollbar-track {
     padding: 0.52rem 1.1rem;
   }
 
-  /* 푸터 컬럼 → 세로 정렬 */
+  /* 푸터 */
   #footer .inner {
     max-width: 100%;
     width: 100%;
@@ -1251,12 +1269,12 @@ body::-webkit-scrollbar-track {
   #footer {
     height: auto;
   }
-
+/* 오른쪽 퀵버튼 */
   .right-quick {
   width: 36px;
   gap: 5px;
   z-index: 10;
-  bottom: 30px;
+  bottom: 0;
   height: 90px;
   }
 }
