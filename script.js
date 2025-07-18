@@ -9,7 +9,7 @@ $(".close-btn").click(function() {
   $(".side-box").removeClass("active");
   setTimeout(function(){
     $(".top-banner").removeClass("m_active");
-  }, 300);
+  }, 500);
 
 });
 
