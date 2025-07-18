@@ -71,8 +71,7 @@ a {
   font-size: 13px;
   display: block;
   font-weight: 400;
-  position: fixed;
-  z-index: 1000;
+  position: static;
 }
 
 /* 메인베너 끝 */
@@ -94,7 +93,6 @@ a {
   align-items: center;
   position: fixed;
   z-index: 1000;
-  margin-top: 40px;
   padding: 0 5rem;
   width: 100%;
   transition: top 0.2s ease-in-out;
@@ -925,6 +923,58 @@ body::-webkit-scrollbar-track {
   .side-menu > .side-icon {
     display: flex;
     gap: .7rem;
+  }
+
+/* 사이드메뉴 아이템 */
+.top-banner.m_active {
+  opacity: 0;
+}
+
+  .side-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #be201f;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition:  transform .4s ease-in-out;
+  }
+
+  .side-box.active {
+    transform: translateY(0);
+  }
+
+
+  .side-box .side-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 210px 0;
+    gap: 15rem;
+  }
+
+  .side-box .side-item_box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .side-box .side-item_box ul li a {
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .side-box .side-wrap .close-btn {
+    width: 20px;
+  }
+
+  .side-box .side-wrap .close-btn img {
+    display: block;
+    width: 100%;
   }
 
   /*  로고  */

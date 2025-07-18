@@ -1,4 +1,19 @@
 console.clear();
+
+// 사이드메뉴 위아래
+$(".side-btn").click(function() {
+  $(".side-box").addClass("active");
+  $(".top-banner").addClass("m_active");
+});
+$(".close-btn").click(function() {
+  $(".side-box").removeClass("active");
+  setTimeout(function(){
+    $(".top-banner").removeClass("m_active");
+  }, 300);
+
+});
+
+// 헤더 사라지고 생기기
 const group = document.querySelector('.mq-group');
 console.log(group.offsetWidth);
 
