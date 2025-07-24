@@ -63,12 +63,12 @@ a {
 /* 메인베너 시작 */
 .top-banner {
   width: 100%;
-  height: 40px;
+  height: 45px;
   background-color: rgb(190, 32, 31);
   color: #fff;
   text-align: center;
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 15px;
   display: block;
   font-weight: 400;
   position: static;
@@ -226,6 +226,7 @@ li {
 }
 
 .sec-1>.img-box {
+  /* margin-top: 10px; */
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -249,6 +250,7 @@ li {
   gap: 2.5rem;
   color: #fff;
   top: 25%;
+  white-space: nowrap;
 }
 
 .sec-1>.txt-box>.tit {
@@ -898,6 +900,11 @@ body::-webkit-scrollbar-track {
 
 
 /* 헤더 */
+/* 상단베너 */
+.top-banner {
+ font-size: 13px;
+  height: 40px;
+}
 .main-box {
   height: 60px;
   justify-content: space-between;
