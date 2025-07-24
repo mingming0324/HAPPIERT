@@ -49,7 +49,9 @@ $(window).on('scroll', function () {
   // 박스가 지금 어디쯤인지 계산해보기
   const boxBottom = scrollY + winHeight - boxHeight - 100;
 
-  // 박스가 푸터랑 겹치려 하면 딱 멈추게!
+  // 박스가 푸터랑 겹치려 하면 멈추게
+  if (window.innerWidth > 768) {
+      // pc버전
   if (boxBottom > footerTop) {
     box.css({
       position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
@@ -60,11 +62,31 @@ $(window).on('scroll', function () {
     // 아직 푸터 안 닿았으면 계속 따라다니기
     box.css({
       position: 'fixed', // 화면에 고정
-      top: '81.4%', // 아래쪽에 띄워놓기
+      top: '82%', // 아래쪽에 띄워놓기
       right: '30px',
     });
   }
+}
+// 모바일 버전
+else  {
+  if (boxBottom > footerTop) {
+    box.css({
+      position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
+      top: footerTop - boxHeight - 30 + 'px', // 푸터보다 살짝 위에
+      right: '20px',
+    });
+  } else {
+    // 아직 푸터 안 닿았으면 계속 따라다니기
+    box.css({
+      position: 'fixed', // 화면에 고정
+      top: '88%', // 아래쪽에 띄워놓기
+      right: '20px',
+    });
+  }
+}
+console.log("dd");
 });
+
 
 // 모바일 스와이퍼
 var swiper = new Swiper('.mySwiper', {

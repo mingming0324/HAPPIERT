@@ -695,7 +695,7 @@ img {
   position: fixed;
   z-index: 10;
   bottom: 30px;
-  height: 130px;
+  height: 120px;
 }
 
 .right-quick .right-top {
@@ -1003,12 +1003,12 @@ body::-webkit-scrollbar-track {
   }
 
   .sec-1 .txt-box .tit {
-    font-size: 1.95rem;
+    font-size: 28px;
   }
 
   .sec-1 .txt-box .desc {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
   }
 
 /* 스와이퍼 */
@@ -1028,7 +1028,7 @@ body::-webkit-scrollbar-track {
   }
 
   .sec-3__marquee-wrapper > .marquee > .mq-group .item {
-    font-size: 7rem;
+    font-size: 100px;
     gap: 1rem;
   }
 
@@ -1061,13 +1061,14 @@ body::-webkit-scrollbar-track {
   }
 
   .ms3 .ms3-contbox .contbox .txtbox .tit {
-    font-size: 2.1rem;
+    font-size: 30px;
     margin-bottom: 0.5rem;
 
   }
 
   .ms3 .ms3-contbox .contbox .txtbox .desc {
-    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 300;
     letter-spacing: -0.05rem;
     min-width: 100%;
     margin-bottom: 3rem;
@@ -1082,7 +1083,7 @@ body::-webkit-scrollbar-track {
   }
 
   .ms3 .ms3-contbox .contbox .txtbox .morebtn {
-    font-size: 1rem;
+    font-size: 14px;
     padding: 7.5px 15px;
   }
   
@@ -1147,7 +1148,7 @@ body::-webkit-scrollbar-track {
 
 
   .ms4 .ms4-top .mob_view {
-    font-size: 3.2rem;
+    font-size: 45px;
     display: flex !important;
     flex-direction: column;
     gap: .5rem;
@@ -1159,7 +1160,7 @@ body::-webkit-scrollbar-track {
   }
 
   .ms4 .ms4-top .mob_view .badge {
-    padding: 0.4rem 2.3rem;
+    padding: 5px 32.5px 6px ;
     margin-right: 1rem;
     display: inline-flex;
   }
@@ -1218,17 +1219,17 @@ body::-webkit-scrollbar-track {
   }
 
   .ms4 .ms4-contbox .txtbox .tit {
-    font-size: 2.1rem;
+    font-size: 30px;
     margin-bottom: .7rem;
   }
 
   .ms4 .ms4-contbox .txtbox .desc {
-    font-size: 1rem;
+    font-size: 14px;
     margin-bottom: 2.1rem;
   }
 
   .morebtn.white {
-    font-size: 1rem;
+    font-size: 14px;
     padding: 0.52rem 1.1rem;
   }
 
@@ -1284,7 +1285,7 @@ body::-webkit-scrollbar-track {
 
   #footer .inner .f-contbox .item.info .infobox .infotxt {
     font-weight: 400;
-    font-size: .84rem;
+    font-size: 12px;
   }
 
   #footer .inner .f-contbox .item.guide {
@@ -1302,14 +1303,14 @@ body::-webkit-scrollbar-track {
   }
 
   #footer .inner .f-contbox .item.guide .guidelist li a {
-    font-size: .84rem;
+    font-size: 12px;
     font-weight: 300;
   padding: 0;
   }
 
   #footer .copyright.mb{
     display: block;
-    font-size: .84rem;
+    font-size: 12px;
     color: #fff;
     letter-spacing: -0.04em;
     font-weight: 400;
@@ -1320,11 +1321,11 @@ body::-webkit-scrollbar-track {
     height: auto;
   }
 /* 오른쪽 퀵버튼 */
-  .right-quick {
+.right-quick {
   width: 36px;
   gap: 5px;
   z-index: 10;
-  bottom: 0;
+  bottom: 15px;
   height: 90px;
   }
 }
