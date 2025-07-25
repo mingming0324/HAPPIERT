@@ -84,7 +84,6 @@ else  {
     });
   }
 }
-console.log("dd");
 });
 
 
