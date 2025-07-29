@@ -19,7 +19,7 @@ console.log(group.offsetWidth);
 
 let lastScrollTop = 0;
 const header = document.querySelector('.main-header');
-const threshold = 100; // 스크롤이 이 정도 이상 내려가야 반응
+const threshold = 50; // 스크롤이 이 정도 이상 내려가야 반응
 const minScrollDelta = 5; // 변화폭 민감도 ↑
 
 window.addEventListener('scroll', function () {
