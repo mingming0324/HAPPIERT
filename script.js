@@ -129,3 +129,22 @@ document.querySelector('.append-2-slides').addEventListener('click', function (e
     '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
   ]);
 });
+
+// 팝업 스와이퍼
+var popupSwiper = new Swiper(".popupSwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

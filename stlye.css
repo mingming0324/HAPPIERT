@@ -883,21 +883,46 @@ height: 300px;
   background-color: #fff;
   gap: 10px;
 }
-
-.pop-up-box .silde-box {
+.pop-up-box .pop-up-wrap {
   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.pop-up-box .pop-up-wrap .swiper-wrapper {
+  display: flex;
+  height: 100%;
 }
 
 .pop-up-box .pop-up_s {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  gap: 100px;
+  left: auto;
+  padding-left: 20px;
 }
 
 .pop-up-box  .p_img-box {
   width: 56px;
+  position: relative;
+  margin-bottom: 20px;
 }
-
+.pop-up-box  .p_img-box::after {
+  position: absolute;
+  content: "";
+  width: 108px;
+  height: 108px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(245, 208, 206);
+  z-index: -1;
+  border-radius: 100px;
+}
 .pop-up-box .p_text-box .p_img-box img {
   display: block;
   width: 100%;
@@ -908,6 +933,7 @@ height: 300px;
   font-weight: 600;
   text-align: left;
   line-height: 1.305;
+  margin-bottom: 2px;
 }
 
 .pop-up-box .p_text-box p {
@@ -916,6 +942,45 @@ height: 300px;
   color: #08122c;
   text-align: left;
   line-height: 1.305;
+}
+
+.pop-up-box .p_text-wrap span {
+  display: inline-flex;
+  justify-content: center;
+  background-color: #cd1509;
+  color: #fff;
+ padding: 11px 15px;
+ border-radius: 50px;
+ font-size: 13px;
+ font-weight: 300;
+ margin-top: 20px;
+}
+
+.pop-up-box .popup_counter {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 12px;
+  padding: 4px 6px;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  color: #fff;
+}
+
+.pop-up-box .popup_counter .counter {
+  font-weight: 700;
+}
+
+.pop-up-box .p_btn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+  overflow: hidden;
+  font-size: 13px;
+  color: #0000008a;
+  font-weight: 400;
 }
 
 /* 스크롤바 커스텀 시작 */
