@@ -884,7 +884,7 @@ height: 300px;
   gap: 10px;
 }
 .pop-up-box .pop-up-wrap {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   height: 100%;
 }
@@ -898,8 +898,8 @@ height: 300px;
 .pop-up-box .pop-up_s {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
-  width: 100%;
+  flex-shrink: 0 !important;
+  width: 100% !important;
   height: 100%;
   gap: 100px;
   left: auto;

@@ -105,30 +105,30 @@ var swiper = new Swiper('.mySwiper', {
   }
 });
 
-var appendNumber = 4;
-var prependNumber = 1;
-document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-  e.preventDefault();
-  swiper.prependSlide([
-    '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-    '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-  ]);
-});
-document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-  e.preventDefault();
-  swiper.prependSlide('<div class="swiper-slide">Slide ' + --prependNumber + '</div>');
-});
-document.querySelector('.append-slide').addEventListener('click', function (e) {
-  e.preventDefault();
-  swiper.appendSlide('<div class="swiper-slide">Slide ' + ++appendNumber + '</div>');
-});
-document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-  e.preventDefault();
-  swiper.appendSlide([
-    '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-    '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-  ]);
-});
+// var appendNumber = 4;
+// var prependNumber = 1;
+// document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   swiper.prependSlide([
+//     '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
+//     '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
+//   ]);
+// });
+// document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   swiper.prependSlide('<div class="swiper-slide">Slide ' + --prependNumber + '</div>');
+// });
+// document.querySelector('.append-slide').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   swiper.appendSlide('<div class="swiper-slide">Slide ' + ++appendNumber + '</div>');
+// });
+// document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   swiper.appendSlide([
+//     '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
+//     '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
+//   ]);
+// });
 
 // 팝업 스와이퍼
 var popupSwiper = new Swiper(".popupSwiper", {
@@ -136,15 +136,7 @@ var popupSwiper = new Swiper(".popupSwiper", {
   centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 2000,
     disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  }
 });
