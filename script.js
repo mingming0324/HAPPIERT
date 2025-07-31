@@ -55,7 +55,7 @@ $(window).on('scroll', function () {
   if (boxBottom > footerTop) {
     box.css({
       position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
-      top: footerTop - boxHeight - 20 + 'px', // 푸터보다 살짝 위에
+      top: footerTop - boxHeight - 50 + 'px', // 푸터보다 살짝 위에
       right: '30px',
     });
   } else {
@@ -136,7 +136,23 @@ var popupSwiper = new Swiper(".popupSwiper", {
   centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 2500,
     disableOnInteraction: false,
+  },
+  on: {
+    slideChange: function () {
+      const current = this.realIndex + 1;
+      // 숫자만 있는 <span class="counter">만 업데이트!
+      document.querySelector("#popup_counter .counter").textContent = current;
+    }
   }
+});
+
+// 팝업 닫기
+$(".p_btn-box > span").click(function() {
+  $(".pop-up-box").addClass("active");
+});
+$(".close-btn").click(function() {
+  $(".pop-up-box").removeClass("active");
+
 });
