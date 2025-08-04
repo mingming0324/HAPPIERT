@@ -47,7 +47,7 @@ $(window).on('scroll', function () {
   const winHeight = $(window).height(); // 브라우저 창 높이
 
   // 박스가 지금 어디쯤인지 계산해보기
-  const boxBottom = scrollY + winHeight - boxHeight - 100;
+  const boxBottom = scrollY + winHeight - boxHeight - -50;
 
   // 박스가 푸터랑 겹치려 하면 멈추게
   if (window.innerWidth > 768) {
@@ -62,7 +62,7 @@ $(window).on('scroll', function () {
     // 아직 푸터 안 닿았으면 계속 따라다니기
     box.css({
       position: 'fixed', // 화면에 고정
-      top: '82%', // 아래쪽에 띄워놓기
+      top: '88%', // 아래쪽에 띄워놓기
       right: '30px',
     });
   }
@@ -133,7 +133,8 @@ var swiper = new Swiper('.mySwiper', {
 // 팝업 스와이퍼
 var popupSwiper = new Swiper(".popupSwiper", {
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: false,
+  simulateTouch: true,
   loop: true,
   autoplay: {
     delay: 2500,
