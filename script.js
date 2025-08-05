@@ -1,16 +1,15 @@
 console.clear();
 
 // 사이드메뉴 위아래
-$(".side-btn").click(function() {
-  $(".side-box").addClass("active");
-  $(".top-banner").addClass("m_active");
+$('.side-btn').click(function () {
+  $('.side-box').addClass('active');
+  $('.top-banner').addClass('m_active');
 });
-$(".close-btn").click(function() {
-  $(".side-box").removeClass("active");
-  setTimeout(function(){
-    $(".top-banner").removeClass("m_active");
+$('.close-btn').click(function () {
+  $('.side-box').removeClass('active');
+  setTimeout(function () {
+    $('.top-banner').removeClass('m_active');
   }, 500);
-
 });
 
 // 헤더 사라지고 생기기
@@ -47,45 +46,44 @@ $(window).on('scroll', function () {
   const winHeight = $(window).height(); // 브라우저 창 높이
 
   // 박스가 지금 어디쯤인지 계산해보기
-  const boxBottom = scrollY + winHeight - boxHeight - -50;
+  const boxBottom = scrollY + winHeight - boxHeight - -110;
 
   // 박스가 푸터랑 겹치려 하면 멈추게
   if (window.innerWidth > 768) {
-      // pc버전
-  if (boxBottom > footerTop) {
-    box.css({
-      position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
-      top: footerTop - boxHeight - 50 + 'px', // 푸터보다 살짝 위에
-      right: '30px',
-    });
-  } else {
-    // 아직 푸터 안 닿았으면 계속 따라다니기
-    box.css({
-      position: 'fixed', // 화면에 고정
-      top: '88%', // 아래쪽에 띄워놓기
-      right: '30px',
-    });
+    // pc버전
+    if (boxBottom > footerTop) {
+      box.css({
+        position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
+        top: footerTop - boxHeight - 50 + 'px', // 푸터보다 살짝 위에
+        right: '30px',
+      });
+    } else {
+      // 아직 푸터 안 닿았으면 계속 따라다니기
+      box.css({
+        position: 'fixed', // 화면에 고정
+        top: '790px', // 아래쪽에 띄워놓기
+        right: '30px',
+      });
+    }
   }
-}
-// 모바일 버전
-else  {
-  if (boxBottom > footerTop) {
-    box.css({
-      position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
-      top: footerTop - boxHeight - 30 + 'px', // 푸터보다 살짝 위에
-      right: '20px',
-    });
-  } else {
-    // 아직 푸터 안 닿았으면 계속 따라다니기
-    box.css({
-      position: 'fixed', // 화면에 고정
-      top: '88%', // 아래쪽에 띄워놓기
-      right: '20px',
-    });
+  // 모바일 버전
+  else {
+    if (boxBottom > footerTop) {
+      box.css({
+        position: 'absolute', // 고정된 거 아니고, 페이지 안에서 위치 고정
+        top: footerTop - boxHeight - 30 + 'px', // 푸터보다 살짝 위에
+        right: '20px',
+      });
+    } else {
+      // 아직 푸터 안 닿았으면 계속 따라다니기
+      box.css({
+        position: 'fixed', // 화면에 고정
+        top: '88%', // 아래쪽에 띄워놓기
+        right: '20px',
+      });
+    }
   }
-}
 });
-
 
 // 모바일 스와이퍼
 var swiper = new Swiper('.mySwiper', {
@@ -94,15 +92,15 @@ var swiper = new Swiper('.mySwiper', {
   spaceBetween: 20,
   loop: false,
   slidesOffsetBefore: 20, // 왼쪽 여백
-  slidesOffsetAfter: 20,  // 오른쪽 여백
+  slidesOffsetAfter: 20, // 오른쪽 여백
   breakpoints: {
     0: {
-      slidesPerView: 1.2,   // 모바일
+      slidesPerView: 1.2, // 모바일
     },
     768: {
-      slidesPerView: 3,   // 데스크탑
-    }
-  }
+      slidesPerView: 3, // 데스크탑
+    },
+  },
 });
 
 // var appendNumber = 4;
@@ -131,7 +129,7 @@ var swiper = new Swiper('.mySwiper', {
 // });
 
 // 팝업 스와이퍼
-var popupSwiper = new Swiper(".popupSwiper", {
+var popupSwiper = new Swiper('.popupSwiper', {
   spaceBetween: 30,
   centeredSlides: false,
   simulateTouch: true,
@@ -144,16 +142,15 @@ var popupSwiper = new Swiper(".popupSwiper", {
     slideChange: function () {
       const current = this.realIndex + 1;
       // 숫자만 있는 <span class="counter">만 업데이트!
-      document.querySelector("#popup_counter .counter").textContent = current;
-    }
-  }
+      document.querySelector('#popup_counter .counter').textContent = current;
+    },
+  },
 });
 
 // 팝업 닫기
-$(".p_btn-box > span").click(function() {
-  $(".pop-up-box").addClass("active");
+$('.p_btn-box > span').click(function () {
+  $('.pop-up-box').addClass('active');
 });
-$(".close-btn").click(function() {
-  $(".pop-up-box").removeClass("active");
-
+$('.close-btn').click(function () {
+  $('.pop-up-box').removeClass('active');
 });
