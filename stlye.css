@@ -46,7 +46,9 @@ a {
 }
 
 /* 노말라이즈 끝 */
-
+html {
+  height: 5150px;
+}
 /* 헤더 시작*/
 .main-header {
   position: fixed;
@@ -361,8 +363,34 @@ li {
 
 /* 섹션 2 끝 */
 
-/* 섹션 3 시작 */
+/* 마르퀴 시작 */
 .sec-3__marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.mq-group {
+  position: absolute;
+  display: flex;
+  white-space: nowrap;
+  gap: 100px;
+  left: 0;
+}
+
+.item {
+  font-size: 10rem;
+  font-weight: 600;
+  color: #be201f;
+}
+
+/* .sec-3__marquee-wrapper {
   padding-top: 150px;
   overflow-x: hidden;
   display: flex;
@@ -432,9 +460,9 @@ li {
 
 .sec-3>.item span {
   white-space: nowrap;
-}
+} */
 
-/* 섹션 3 끝 */
+/* 마르퀴 끝 */
 
 /* 섹션 끝 */
 
@@ -753,6 +781,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  
 }
 
 #footer .inner .f-contbox .item {
@@ -765,6 +794,7 @@ img {
   color: white;
   letter-spacing: -0.04rem;
   margin-bottom: 1.5rem;
+  
 }
 
 #footer .inner .f-contbox .item.info .infobox {
@@ -776,7 +806,7 @@ img {
   font-size: 1.25rem;
   line-height: 1.5;
   font-weight: 300;
-  color: white;
+  color: #000;
   letter-spacing: -0.04rem;
 }
 

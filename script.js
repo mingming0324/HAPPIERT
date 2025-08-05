@@ -36,6 +36,66 @@ window.addEventListener('scroll', function () {
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
+// 마르퀴
+$(function () {
+  // 페이지 로드 후 실행되는 jQuery 초기화 함수
+
+  const $group = $(".mq-group"); // marquee에 사용할 원본 텍스트 그룹을 선택
+  const speedNormal = 1;         // 기본 이동 속도 (픽셀/frame 단위)
+  const speedSlow = 0.2;         // hover 시 느려지는 속도
+  let speed = speedNormal;       // 현재 적용할 속도 변수 (초기값은 기본 속도)
+
+  // === 요소 복제 및 초기 위치 설정 ===
+
+  const $clone = $group.clone();       // 원본 그룹을 복제해서 복사본 생성
+  $(".marquee").append($clone);        // marquee 영역에 복사본 추가
+
+  $clone.css("left", $group.width());  // 복사본은 원본 너비만큼 오른쪽에 위치시킴
+
+  let pos1 = 0;                        // 원본 그룹의 현재 left 위치
+  let pos2 = $group.width();          // 복사본의 현재 left 위치 (원본 다음에 붙음)
+
+  // === 애니메이션 루프 함수 ===
+  function animateMarquee() {
+    pos1 -= speed;  // 원본 그룹 왼쪽으로 이동
+    pos2 -= speed;  // 복사본도 동일하게 이동
+
+    // 원본 그룹이 화면 왼쪽 밖으로 완전히 나가면 위치 재설정 (복사본 뒤로 이동)
+    if (pos1 <= -$group.width()) {
+      pos1 = $group.width();
+    }
+
+    // 복사본도 동일하게 처리
+    if (pos2 <= -$clone.width()) {
+      pos2 = $clone.width();
+    }
+
+    // 계산된 위치를 실제 DOM에 적용
+    $group.css("left", pos1 + "px");
+    $clone.css("left", pos2 + "px");
+
+    // 다음 프레임에 다시 실행 (무한 루프)
+    requestAnimationFrame(animateMarquee);
+  }
+
+  // 애니메이션 시작
+  animateMarquee();
+
+  // === 마우스 이벤트로 속도 조절 ===
+
+  // 마우스를 올리면 속도를 느리게
+  $(".marquee").on("mouseenter", function () {
+    speed = speedSlow;
+  });
+
+  // 마우스를 내리면 원래 속도로 복구
+  $(".marquee").on("mouseleave", function () {
+    speed = speedNormal;
+  });
+});
+
+
+// 오른쪽 퀵버튼
 $(window).on('scroll', function () {
   const box = $('.right-quick'); // 따라다니는 박스
   const footer = $('footer'); // 푸터
@@ -85,7 +145,7 @@ $(window).on('scroll', function () {
   }
 });
 
-// 모바일 스와이퍼
+// 모바일- 섹션 2 스와이퍼
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   centeredSlides: false,
@@ -103,30 +163,6 @@ var swiper = new Swiper('.mySwiper', {
   },
 });
 
-// var appendNumber = 4;
-// var prependNumber = 1;
-// document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.prependSlide([
-//     '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-//     '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-//   ]);
-// });
-// document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.prependSlide('<div class="swiper-slide">Slide ' + --prependNumber + '</div>');
-// });
-// document.querySelector('.append-slide').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.appendSlide('<div class="swiper-slide">Slide ' + ++appendNumber + '</div>');
-// });
-// document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.appendSlide([
-//     '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-//     '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-//   ]);
-// });
 
 // 팝업 스와이퍼
 var popupSwiper = new Swiper('.popupSwiper', {
